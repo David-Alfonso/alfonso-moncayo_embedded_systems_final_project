@@ -1,0 +1,16 @@
+# ***EjemploDemonio.service***
+[Unit]
+Description=texto que describe el demonio
+After=multi-user.target
+ 
+[Service]
+Type=simple
+ExecStart=/home/david/proyecto_final/call_all.sh
+User=david
+WorkingDirectory=/home/david/proyecto_final
+Restart=on-failure
+#StandardOutput=/home/david/proyecto_final/prueba_send_all.txt
+#StandardError=syslog
+ 
+[Install]
+WantedBy=multi-user.target
